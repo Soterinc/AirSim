@@ -1,0 +1,17 @@
+# Git
+.git
+.github
+.gitignore
+
+# Project Directories
+
+docs
+mkdocs.yml
+*.md
+Unity
+Examples
+HelloCar
+HelloDrone
+HelloSpawnedDrones
+PythonClient
+pipelines

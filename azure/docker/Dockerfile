@@ -1,4 +1,6 @@
-FROM nvidia/cudagl:9.0-devel
+FROM nvidia/cudagl:10.2-devel-ubuntu18.04
+
+ARG AIRSIM_VERSION=v1.8.1
 
 RUN apt-get update
 RUN apt-get install \
@@ -34,7 +36,7 @@ WORKDIR /home/airsim_user
 
 # Change the following values to use a different AirSim binary
 # Also change the AIRSIM_EXECUTABLE variable in docker-entrypoint.sh
-ENV AIRSIM_BINARY_ZIP_URL=https://github.com/microsoft/AirSim/releases/download/v1.3.1-linux/Blocks.zip 
+ENV AIRSIM_BINARY_ZIP_URL=https://github.com/microsoft/AirSim/releases/download/${AIRSIM_VERSION}/Blocks.zip 
 ENV AIRSIM_BINARY_ZIP_FILENAME=Blocks.zip
 
 ENV SDL_VIDEODRIVER_VALUE=offscreen

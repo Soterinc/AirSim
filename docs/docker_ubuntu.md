@@ -7,7 +7,7 @@ We've two options for docker. You can either build an image for running [airsim 
 
 #### Build the docker image
 - Below are the default arguments.
-  `--base_image`: This is image over which we'll install airsim. We've tested on Ubuntu 18.04 with CUDA 10.0.
+  `--base_image`: This is image over which we'll install airsim. We've tested on Ubuntu 18.04 with CUDA 10.2.
    You can specify any [NVIDIA cudagl](https://hub.docker.com/r/nvidia/cudagl/) at your own risk.
    `--target_image` is the desired name of your docker image.
    Defaults to `airsim_binary` with same tag as the base image
@@ -15,8 +15,8 @@ We've two options for docker. You can either build an image for running [airsim 
 ```bash
 $ cd Airsim/docker;
 $ python build_airsim_image.py \
-   --base_image=nvidia/cudagl:10.0-devel-ubuntu18.04 \
-   --target_image=airsim_binary:10.0-devel-ubuntu18.04
+   --base_image=nvidia/cudagl:10.2-devel-ubuntu18.04 \
+   --target_image=airsim_binary:10.2-devel-ubuntu18.04
 ```
 
 - Verify you have an image by:
@@ -41,9 +41,9 @@ Modify it to fetch the specific binary required.
    $ ./run_airsim_image_binary.sh DOCKER_IMAGE_NAME UNREAL_BINARY_SHELL_SCRIPT UNREAL_BINARY_ARGUMENTS -- headless
 ```
 
-   For Blocks, you can do a `$ ./run_airsim_image_binary.sh airsim_binary:10.0-devel-ubuntu18.04 Blocks/Blocks.sh -windowed -ResX=1080 -ResY=720`
+   For Blocks, you can do a `$ ./run_airsim_image_binary.sh airsim_binary:10.2-devel-ubuntu18.04 Blocks/Blocks.sh -windowed -ResX=1080 -ResY=720`
 
-   * `DOCKER_IMAGE_NAME`: Same as `target_image` parameter in previous step. By default, enter `airsim_binary:10.0-devel-ubuntu18.04`
+   * `DOCKER_IMAGE_NAME`: Same as `target_image` parameter in previous step. By default, enter `airsim_binary:10.2-devel-ubuntu18.04`
    * `UNREAL_BINARY_SHELL_SCRIPT`: for Blocks enviroment, it will be `Blocks/Blocks.sh`
    * [`UNREAL_BINARY_ARGUMENTS`](https://docs.unrealengine.com/en-us/Programming/Basics/CommandLineArguments):
       For airsim, most relevant would be `-windowed`, `-ResX`, `-ResY`. Click on link to see all options.

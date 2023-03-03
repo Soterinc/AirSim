@@ -1,0 +1,25 @@
+# Git
+
+.git
+.github
+.gitignore
+
+# Project Directories
+
+docs
+mkdocs.yml
+*.md
+Unity
+PythonClient
+pipelines
+tools
+
+## Examples
+
+Examples
+DroneShell
+DroneServer
+GazeboDrone
+HelloCar
+HelloDrone
+HelloSpawnedDrones

@@ -399,6 +399,7 @@ PythonClient/docs/_build
 
 # Docker
 /docker/Blocks/
+/docker/LinuxBlocks*
 
 # clangd generated folder, for e.g. from VSCode clangd extension
 .cache/

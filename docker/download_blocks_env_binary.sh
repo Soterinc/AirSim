@@ -1,6 +1,8 @@
 #!/bin/bash
 set -x
 
+#AIRSIM_VERSION=v1.6.0-linux
+#AIRSIM_VERSION=v1.7.0-linux
 AIRSIM_VERSION=v1.8.1
 
 if ! which unzip; then
